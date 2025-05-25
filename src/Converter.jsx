@@ -53,7 +53,7 @@ function Converter() {
     <div className="converter__wrapper" style={getBgStyle()}>
         <div className="fields__wrapper">
             <form className="hex-code-form" onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder="" name="hexCode" className="field" onChange={(e) => onFormInputChange(e)}/>
+                <input type="text" placeholder="" name="hexCode" className="field input" onChange={(e) => onFormInputChange(e)}/>
             </form>
             <div className="field">{rgbText}</div>
         </div>
