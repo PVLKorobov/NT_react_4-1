@@ -7,12 +7,8 @@ function Converter() {
     const [rgbText, setRgbText] = useState('')
 
 
-    function isValidHex(code) {
-        if (code.length == 7 && code[0] == '#' && parseInt(code.substring(1,3), 16) && parseInt(code.substring(3,5), 16) && parseInt(code.substring(5,7), 16)) {
-            return true
-        }
-
-        return false
+    function isValidHex(hexCode) {
+        return /^#([0-9a-fA-F]{6})$/.test(hexCode)
     }
 
     function convertHexToRgb(hexCode) {
